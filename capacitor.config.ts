@@ -1,8 +1,8 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.ioniccapacitorapp.Captura&Vota',
-  appName: 'Captura&Vota',
+  appId: 'com.ioniccapacitorapp.AprendeConUnToque',
+  appName: 'AprendeConUnToque',
   webDir: 'www'
 };
 
