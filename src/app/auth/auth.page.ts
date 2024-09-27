@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 
 import { AlertController, LoadingController } from '@ionic/angular';
+import { addIcons } from 'ionicons';
+import { logoIonic } from 'ionicons/icons';
 
 import { Observable } from 'rxjs';
 
@@ -15,14 +17,21 @@ import { AuthResponseData, AuthService } from './auth.service';
 })
 export class AuthPage {
   isLoading = false;
-  isLogin = false;
+  isLogin = true;
 
   constructor(
     private authService: AuthService, 
     private router: Router,
     private loadingCtrl: LoadingController,
     private alertCtrl: AlertController
-  ) {}
+  ) {
+    /**
+     * Any icons you want to use in your application
+     * can be registered in app.component.ts and then
+     * referenced by name anywhere in your application.
+     */
+        addIcons({ logoIonic });
+  }
 
 
   authenticate (authform: NgForm) {
@@ -66,9 +75,9 @@ export class AuthPage {
       });
   }
 
-  onSwitchAuthMode() {
-    this.isLogin = !this.isLogin;
-  }
+  // onSwitchAuthMode() {
+  //   this.isLogin = !this.isLogin;
+  // }
 
   onSubmit(authform: NgForm) {
     if (!authform.valid) {

@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./splash.page.scss'],
 })
 export class SplashPage implements OnInit {
-  isVisible: boolean = true;
+  // isVisible: boolean = true;
 
   constructor(
     private router: Router

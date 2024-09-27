@@ -1,28 +1,26 @@
 <ion-content class="ion-justify-content-center">
-  <ion-grid>
-    <ion-row>
-      <ion-col size="4" offset="4">
-        <img src="../../assets/images/hola.gif" />
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <div class="ion-text-center">
+    <h1>Alarma<br>de robo</h1>
+  </div>
 
   <form #authform="ngForm" (ngSubmit)="onSubmit(authform)" class="ion-padding">
     <ion-grid>
-      <ion-row style="margin-bottom: 2vh;">
+      <ion-row>
         <ion-col size-sm="6" offset-sm="3">
           <ion-list>
-            <label>Correo electrónico:</label>
+            <!-- <label>Correo electrónico:</label> -->
             <ion-item>
-              <ion-input type="email" ngModel name="email" required email #emailCtrl="ngModel"></ion-input>
+              <ion-input class="ion-padding" type="email" ngModel name="email" required email #emailCtrl="ngModel"
+                placeholder="Usuario"></ion-input>
             </ion-item>
             <ion-item *ngIf="!emailCtrl.valid && emailCtrl.touched" lines="none">
               <ion-label class="errors-on-the-forms">El formato no se corresponde con una dirección de correo
                 electrónico.</ion-label>
             </ion-item>
-            <label>Contraseña:</label>
+            <!-- <label>Contraseña:</label> -->
             <ion-item>
-              <ion-input type="password" ngModel name="password" required minlength="6" #passCtrl="ngModel"></ion-input>
+              <ion-input class="ion-padding" type="password" ngModel name="password" required password minlength="6"
+                #passCtrl="ngModel" placeholder="Clave"></ion-input>
             </ion-item>
             <ion-item *ngIf="!passCtrl.valid && passCtrl.touched" lines="none">
               <ion-label class="errors-on-the-forms">La contraseña debe contener al menos 6 caracteres.</ion-label>
@@ -32,13 +30,14 @@
       </ion-row>
 
       <ion-row>
-        <ion-col size-sm="6" offset-sm="3">
-          <ion-button type="submit" expand="block" class="btn-ingresar" [disabled]="!authform.valid">
-            {{ isLogin ? 'Ingresar' : 'Registrarse'}}
+        <ion-col size-xs="4" offset-xs="4">
+          <ion-button type="submit" expand="block" class="btn-ingresar" shape="round" [disabled]="!authform.valid">
+            <!-- {{ isLogin ? 'Ingresar' : 'Registrarse'}} -->
+            <ion-icon slot="icon-only" name="log-in-outline"></ion-icon>
           </ion-button>
-          <ion-button type="button" fill="clear" expand="block" class="cambiarA " (click)="onSwitchAuthMode()">
+          <!-- <ion-button type="button" fill="clear" expand="block" class="cambiarA " (click)="onSwitchAuthMode()">
             Cambiar a {{ isLogin ? 'Registro' : 'Ingreso'}}
-          </ion-button>
+          </ion-button> -->
         </ion-col>
       </ion-row>
 
@@ -49,66 +48,23 @@
       <ion-row>
         <ion-col size-sm="6" offset-sm="3">
           <ion-label class="ion-text-center">
-            <h3>Ingreso rápido</h3>
+            <h3>Usuarios registrados</h3>
           </ion-label>
         </ion-col>
       </ion-row>
       <ion-row id="row-avatars">
-        <ion-col size-sm="2">
-          <ion-button type="button" fill="clear" expand="full"
+        <ion-col>
+          <ion-button type="button" fill="solid" expand="block"
             (click)="onFastLogin(authform, 'invitado@invitado.com', '222222')">
-            <ion-grid class="grid-avatars">
-              <ion-row>
-                <ion-col class="no-lateral-margin-or-padding">
-                  <img src="../../assets/images/capibara.png" />
-                </ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col class="no-lateral-margin-or-padding">
-                  <ion-label>
-                    <ion-text>Capibara invitado</ion-text>
-                  </ion-label>
-                </ion-col>
-              </ion-row>
-            </ion-grid>
+            Invitado
           </ion-button>
-        </ion-col>
-        <ion-col size-sm="2">
-          <ion-button type="button" fill="clear" expand="full"
+          <ion-button type="button" fill="solid" expand="block"
             (click)="onFastLogin(authform, 'usuario@usuario.com', '333333')">
-            <ion-grid class="grid-avatars">
-              <ion-row>
-                <ion-col class="no-lateral-margin-or-padding">
-                  <img src="../../assets/images/pinguino.png" />
-                </ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col class="no-lateral-margin-or-padding">
-                  <ion-label>
-                    <ion-text>Pingüino usuario</ion-text>
-                  </ion-label>
-                </ion-col>
-              </ion-row>
-            </ion-grid>
+            Usuario
           </ion-button>
-        </ion-col>
-        <ion-col size-sm="2">
-          <ion-button type="button" fill="clear" expand="full"
+          <ion-button type="button" fill="solid" expand="block"
             (click)="onFastLogin(authform, 'anonimo@anonimo.com', '444444')">
-            <ion-grid class="grid-avatars">
-              <ion-row>
-                <ion-col class="no-lateral-margin-or-padding">
-                  <img src="../../assets/images/jaguar.png" />
-                </ion-col>
-              </ion-row>
-              <ion-row>
-                <ion-col class="no-lateral-margin-or-padding">
-                  <ion-label>
-                    <ion-text>Jaguar anónimo</ion-text>
-                  </ion-label>
-                </ion-col>
-              </ion-row>
-            </ion-grid>
+            Anónimo
           </ion-button>
         </ion-col>
       </ion-row>

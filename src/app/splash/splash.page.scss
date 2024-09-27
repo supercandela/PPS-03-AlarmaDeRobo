@@ -10,83 +10,88 @@
  * animation ping
  * ----------------------------------------
  */
- @-webkit-keyframes ping {
+@-webkit-keyframes ping {
   0% {
     -webkit-transform: scale(0.2);
-            transform: scale(0.2);
+    transform: scale(0.2);
     opacity: 0.8;
   }
+
   80% {
     -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    transform: scale(1.2);
     opacity: 0;
   }
+
   100% {
     -webkit-transform: scale(2.2);
-            transform: scale(2.2);
+    transform: scale(2.2);
     opacity: 0;
   }
 }
+
 @keyframes ping {
   0% {
     -webkit-transform: scale(0.2);
-            transform: scale(0.2);
+    transform: scale(0.2);
     opacity: 0.8;
   }
+
   80% {
     -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    transform: scale(1.2);
     opacity: 0;
   }
+
   100% {
     -webkit-transform: scale(2.2);
-            transform: scale(2.2);
+    transform: scale(2.2);
     opacity: 0;
   }
 }
 
 
 ion-content {
-    --background: rgb(0, 0, 0);
+  --background: rgb(0, 0, 0);
+  --ion-font-family: 'digital', 'arial', sans-serif;
 
-    .ping {
-        -webkit-animation: ping 1.5s ease-in-out 2s infinite both;
-        animation: ping 1.5s ease-in-out 2s infinite both;
+  .ping {
+    -webkit-animation: ping 1.5s ease-in-out 2s infinite both;
+    animation: ping 1.5s ease-in-out 2s infinite both;
 
-        img {
-            width: 80vw;
-            margin-top: 10vh;
-        }
+    img {
+      width: 80vw;
+      margin-top: 10vh;
     }
+  }
 
-    h1 {
-                color: rgb(255, 0, 0);
-                font-size: 3.5em;
-                font-weight: bolder;
-                text-shadow: 0 4px 10px rgba(140, 13, 190, 0.8);
+  h1 {
+    color: rgb(255, 0, 0);
+    font-size: 3.5em;
+    font-weight: bolder;
+  }
+
+  .nombre {
+    margin-top: 5vh;
+
+    ion-label {
+      color: rgb(255, 0, 0);
+      padding: 10px;
+      font-size: 2em;
+      font-weight: 800;
+      border-radius: 10px;
     }
-
-    .nombre {
-      margin-top: 5vh;
-
-      ion-label {
-          color: rgb(255, 0, 0);
-          padding: 10px;
-          font-size: 2em;
-          font-weight: 800;
-          border-radius: 10px;
-      }
   }
 
   .division {
-      margin-top: 3vh;
+    margin-top: 3vh;
 
-      ion-label {
-          color: rgb(255, 0, 0);
-          padding: 10px;
-          font-size: 1.5em;
-          font-weight: 600;
-          border-radius: 10px;
-      }
+    ion-label {
+      color: rgb(255, 0, 0);
+      padding: 10px;
+      font-size: 1.5em;
+      font-weight: 600;
+      border-radius: 10px;
+    }
   }
 }
