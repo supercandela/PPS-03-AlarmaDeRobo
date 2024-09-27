@@ -7,16 +7,24 @@ import { Router } from '@angular/router';
   styleUrls: ['./splash.page.scss'],
 })
 export class SplashPage implements OnInit {
+  isVisible: boolean = true;
 
   constructor(
     private router: Router
   ) {
     setTimeout(() => {
       this.router.navigateByUrl('/home');
-    }, 3000);
+    }, 3500);
   }
 
   ngOnInit() {
+    this.ocultarNombreYDivision();
+  }
+
+  ocultarNombreYDivision () {
+    setTimeout(() => {
+      this.isVisible = false;
+    }, 1000);
   }
 
 }

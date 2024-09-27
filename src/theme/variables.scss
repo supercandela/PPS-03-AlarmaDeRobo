@@ -1,5 +1,11 @@
-// For information on how to create your own theme, please see:
-// http://ionicframework.com/docs/theming/
+@font-face {
+    font-family: 'inkfree';
+    src: url('../assets/fonts/Inkfree.ttf') format("truetype");
+}
+
+* {
+    --ion-font-family: 'inkfree', 'arial', sans-serif;
+}
 
 
 .md.toolbar-title-default {
