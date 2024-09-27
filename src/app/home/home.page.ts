@@ -23,7 +23,15 @@ export class HomePage implements OnInit {
 
   }
 
-  onLogout () {
+  onHeaderButtonClick (num: number) {
+
+  }
+
+  onMainButtonClick (num: number) {
+
+  }
+
+  onLogoutClick () {
     this.authService.logout();
     this.router.navigateByUrl('/auth');
   }

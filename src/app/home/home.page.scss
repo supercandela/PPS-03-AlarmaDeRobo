@@ -1,36 +1,131 @@
+// ion-content {
+//     --padding-top: 0;
+//     --padding-bottom: 0;
+// }
+
+// .buttons-container {
+//     display: flex;
+//     height: 100vh;
+//     /* Hace que el contenedor ocupe toda la altura de la pantalla */
+// }
+
+// .full-height-button {
+//     flex: 1;
+//     /* Los botones ocupan el mismo ancho */
+//     margin-top: 7vh;
+//     height: 93vh;
+//     /* Cada botón ocupa toda la altura */
+//     border: none;
+//     padding: 0;
+//     background-size: contain;
+//     /* Asegura que la imagen cubra todo el botón */
+//     background-position: center;
+//     background-repeat: no-repeat;
+// }
+
+// .button-left {
+//     background-color: rgb(152, 251, 152);
+//     background-image: url('../../assets/images/BotonSi.png');
+//     /* Ruta de la imagen de fondo del botón izquierdo */
+// }
+
+// .button-right {
+//     background-color: rgb(255, 188, 88);
+//     background-image: url('../../assets/images/BotonNo.png');
+//     /* Ruta de la imagen de fondo del botón derecho */
+// }
+
+
+// ----------------------------------
+
 ion-content {
-    --padding-top: 0;
-    --padding-bottom: 0;
-}
-
-.buttons-container {
+    --padding-top: 3%;
+    --padding-bottom: 3%;
+    --background: rgb(248, 238, 145);
     display: flex;
-    height: 100vh;
-    /* Hace que el contenedor ocupe toda la altura de la pantalla */
-}
-
-.full-height-button {
-    flex: 1;
-    /* Los botones ocupan el mismo ancho */
-    margin-top: 7vh;
-    height: 93vh;
-    /* Cada botón ocupa toda la altura */
-    border: none;
-    padding: 0;
-    background-size: contain;
-    /* Asegura que la imagen cubra todo el botón */
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    height: 20%; /* El header ocupa el 10% de la pantalla */
+    justify-content: space-around;
+  
+    .header-row {
+      display: flex;
+      justify-content: space-around;
+      height: 50%;
+    }
+  
+    .header-button {
+      width: 30%; /* Botones en el header ocupan el 30% de la fila */
+      height: 100%;
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
+      border: none;
+      background-color: transparent;
+      padding: 5px;
+    }
+  }
+  
+  .buttons-grid {
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Grilla 2x3 por defecto */
+    grid-template-rows: repeat(3, 1fr);
+    flex-grow: 1; /* Ocupa todo el espacio disponible después del header */
+  }
+  
+  .square-button {
+    width: 100%;
+    aspect-ratio: 1/1; /* Asegura que los botones sean cuadrados */
+    background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-}
-
-.button-left {
-    background-color: rgb(152, 251, 152);
-    background-image: url('../../assets/images/BotonSi.png');
-    /* Ruta de la imagen de fondo del botón izquierdo */
-}
-
-.button-right {
-    background-color: rgb(255, 188, 88);
-    background-image: url('../../assets/images/BotonNo.png');
-    /* Ruta de la imagen de fondo del botón derecho */
-}
+    border: 3px solid rgba(140, 13, 190, 0.8);
+    background-color: white;
+    border-radius: 20px;
+  }
+  
+  .footer-container {
+    height: 7%; /* Footer ocupa el 10% de la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    .footer-button {
+      width: 50px;
+      height: 50px;
+      background-size: cover;
+      background-position: center;
+      border: none;
+      background-color: transparent;
+    }
+  }
+  
+  @media (orientation: landscape) {
+    ion-content {
+      flex-direction: row; /* Cambia la dirección del contenido a fila */
+    }
+  
+    .header-container {
+      width: 10%; /* Ahora el header ocupa un 10% de ancho en formato horizontal */
+      height: 100%; /* Asegura que ocupe todo el alto de la pantalla */
+      flex-direction: column; /* Mantiene los botones en vertical */
+    }
+  
+    .buttons-grid {
+      grid-template-columns: repeat(3, 1fr); /* Grilla 3x2 en formato horizontal */
+      grid-template-rows: repeat(2, 1fr);
+      flex-grow: 1; /* Mantiene el tamaño adecuado del área de botones */
+    }
+  
+    .footer-container {
+      width: 10%; /* Ahora el footer ocupa el 10% de ancho en formato horizontal */
+      height: 100%; /* Asegura que ocupe todo el alto de la pantalla */
+    }
+  }
+  
+  
