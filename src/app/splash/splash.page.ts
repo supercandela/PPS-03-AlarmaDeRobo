@@ -14,17 +14,17 @@ export class SplashPage implements OnInit {
   ) {
     setTimeout(() => {
       this.router.navigateByUrl('/home');
-    }, 3500);
+    }, 4000);
   }
 
   ngOnInit() {
-    this.ocultarNombreYDivision();
+    // this.ocultarNombreYDivision();
   }
 
-  ocultarNombreYDivision () {
-    setTimeout(() => {
-      this.isVisible = false;
-    }, 1000);
-  }
+  // ocultarNombreYDivision () {
+  //   setTimeout(() => {
+  //     this.isVisible = false;
+  //   }, 1000);
+  // }
 
 }

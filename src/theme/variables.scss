@@ -1,15 +1,15 @@
 @font-face {
-    font-family: 'inkfree';
-    src: url('../assets/fonts/Inkfree.ttf') format("truetype");
+    font-family: 'digital';
+    src: url('../assets/fonts/DS-DIGII.ttf') format("truetype");
 }
 
 * {
-    --ion-font-family: 'inkfree', 'arial', sans-serif;
+    --ion-font-family: 'digital', 'arial', sans-serif;
 }
 
 
 .md.toolbar-title-default {
     /** toolbar **/
-    --ion-toolbar-background: rgb(255, 153, 0);;
-    --ion-toolbar-color: white;
+    // --ion-toolbar-background: rgb(255, 153, 0);
+    // --ion-toolbar-color: white;
 }
