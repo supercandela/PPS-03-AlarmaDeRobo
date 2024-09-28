@@ -1,4 +1,4 @@
-package com.ioniccapacitorapp.proyectoUTNPPS;
+package com.ioniccapacitorapp.AlarmaDeRobo;
 
 import com.getcapacitor.BridgeActivity;
 

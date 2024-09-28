@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">PPS-Template</string>
-    <string name="title_activity_main">PPS Template</string>
-    <string name="package_name">com.ioniccapacitorapp.proyectoUTNPPS</string>
-    <string name="custom_url_scheme">com.ioniccapacitorapp.proyectoUTNPPS</string>
+    <string name="app_name">AlarmaDeRobo</string>
+    <string name="title_activity_main">AlarmaDeRobo</string>
+    <string name="package_name">com.ioniccapacitorapp.AlarmaDeRobo</string>
+    <string name="custom_url_scheme">com.ioniccapacitorapp.AlarmaDeRobo</string>
 </resources>
