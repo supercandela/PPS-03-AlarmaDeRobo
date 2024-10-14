@@ -8,6 +8,9 @@ import { HomePageRoutingModule } from './home-routing.module';
 
 import { HomePage } from './home.page';
 
+import { DeviceMotion } from '@awesome-cordova-plugins/device-motion/ngx';
+import { Flashlight } from '@awesome-cordova-plugins/flashlight/ngx';
+import { Vibration } from '@awesome-cordova-plugins/vibration/ngx';
 
 @NgModule({
   imports: [
@@ -16,6 +19,7 @@ import { HomePage } from './home.page';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage]
+  declarations: [HomePage],
+  providers: [DeviceMotion, Flashlight, Vibration]
 })
 export class HomePageModule {}
