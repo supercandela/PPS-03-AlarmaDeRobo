@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Introduzca su clave</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cerrarModal()">Cerrar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <p>Por favor, introduzca su clave:</p>
+  <ion-item>
+    <ion-label position="floating">Clave</ion-label>
+    <ion-input [(ngModel)]="clave" type="password"></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" (click)="guardarClave()">Enviar</ion-button>
+</ion-content>

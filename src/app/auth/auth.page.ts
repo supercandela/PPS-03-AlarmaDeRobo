@@ -9,6 +9,7 @@ import { logoIonic } from 'ionicons/icons';
 import { Observable } from 'rxjs';
 
 import { AuthResponseData, AuthService } from './auth.service';
+import { CompartidoService } from '../compartido.service';
 
 @Component({
   selector: 'app-auth',
@@ -23,7 +24,8 @@ export class AuthPage {
     private authService: AuthService, 
     private router: Router,
     private loadingCtrl: LoadingController,
-    private alertCtrl: AlertController
+    private alertCtrl: AlertController,
+    private compartido: CompartidoService
   ) {
     /**
      * Any icons you want to use in your application
@@ -53,6 +55,7 @@ export class AuthPage {
             console.log(resData);
             this.isLoading = false;
             loadingEl.dismiss();
+            this.compartido.setValor(authform.value.password);
             authform.controls['email'].setValue('');
             authform.controls['password'].setValue('');
             this.router.navigateByUrl('/home');

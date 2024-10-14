@@ -1,9 +1,14 @@
 <ion-content>
   <!-- Botón principal que ocupa toda la pantalla -->
-  <button ion-button class="full-screen-button" (click)="onMainButtonClick()" style="background-image: url('../../assets/icon/Logo-Splash.png');"></button>
+  <button ion-button class="full-screen-button"  [ngClass]="{ 'alarma-activada': isAlarmaActivada, 'alarma-desactivada': !isAlarmaActivada }" (click)="onMainButtonClick()">
+    <div class="button-content">
+      <img src="../../assets/icon/Logo-Splash.png" alt="Logo" class="button-image" />
+      <span>{{ isAlarmaActivada ? 'Alarma Activada' : 'Alarma Desactivada' }}</span>
+    </div>
+  </button>
 
   <!-- Botón flotante para cerrar sesión -->
-  <button ion-button class="floating-logout-button" (click)="onLogoutClick()">
+  <button ion-button class="floating-logout-button" [ngClass]="{ 'ocultar': isAlarmaActivada }" (click)="onLogoutClick()">
     <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
   </button>
 </ion-content>
